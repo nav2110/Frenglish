@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000033">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tan_background"
+        android:orientation="vertical">
+
+        <!-- Each TextView is wrapped in a FrameLayout with a themed background,
+        and then set the background of the TextView to be a ?android:attr/selectableItemBackground.
+
+        This way, we can keep the colored background per category view (defined in the framework layout),
+        as well as have touch feedback (defined in the text view). FrameLayout is simply a ViewGroup
+        that typically contains 1 child view -->
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/category_numbers">
+
+            <TextView
+                android:id="@+id/numbers"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_numbers" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/category_family">
+
+            <TextView
+                android:id="@+id/family"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_family" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/category_colors">
+
+            <TextView
+                android:id="@+id/colors"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_colors" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/category_phrases">
+
+            <TextView
+                android:id="@+id/phrases"
+                style="@style/CategoryStyle"
+                android:background="?android:attr/selectableItemBackground"
+                android:text="@string/category_phrases" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</ScrollView>
